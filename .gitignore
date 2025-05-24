@@ -1,76 +1,59 @@
-# Qt-specific
-*.pro.user
-*.pro.user.*
-*.qbs.user
-*.qbs.user.*
-*.moc
-moc_*.cpp
-qrc_*.cpp
-ui_*.h
-Makefile*
-*build-*
-*.qm
-*.prl
-
-# Qt Creator
-CMakeLists.txt.user*
-
-# Build directories
-build/
-debug/
-release/
-bin/
-lib/
-
-# Compiled Object files
-*.slo
-*.lo
+# Общие игнорируемые файлы для C++/Qt проектов
 *.o
-*.obj
+*.moc
+*.cpp.d
+*.h.d
+*.d
+*.user
+*.autosave
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
+# Исполняемые файлы
+function_plotter
+*.exe
+*.app
 *.dll
-
-# Compiled Static libraries
-*.lai
-*.la
+*.so
 *.a
 *.lib
 
-# Executables
-*.exe
-*.out
-*.app
-
-# CMake
+# Файлы сборки CMake
 CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
+CMakeFiles/
 cmake_install.cmake
-install_manifest.txt
-compile_commands.json
+Makefile
+CMakeLists.txt.user
 CTestTestfile.cmake
-_deps
+CMakeConfigureLog.yaml
 
-# IDE-specific files
+# Автогенерированные файлы Qt
+function_plotter_autogen/
+*.qmlc
+*.jsc
+moc_*
+qrc_*
+ui_*
+
+# Артефакты IDE
 .idea/
 .vscode/
-*.swp
-*.swo
-*~
+*.code-workspace
+*.sln
+*.vcxproj*
+*.vc.db
 
-# OS-specific
+# Системные файлы
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db 
+Thumbs.db
+
+# Временные файлы
+*~
+*.swp
+*.bak
+*.tmp
+
+# Каталоги сборки
+build/
+Debug/
+Release/
+x64/
+Win32/
