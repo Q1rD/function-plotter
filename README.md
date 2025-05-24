@@ -44,7 +44,7 @@ sudo apt-get install build-essential cmake libmuparser-dev
 ```
 
 ### Для Windows:
-
+SOON
 
 ## Сборка и запуск
 
@@ -76,47 +76,7 @@ make
 ```
 
 ### Windows
-1. Клонировать репозиторий:
-```bash
-git clone https://github.com/Q1rD/function-plotter.git
-cd function-plotter
-```
-
-```
-mkdir build
-cd build
-```
-
-2. Сконфигурировать проект:
-```bash
-# Для Visual Studio
-cmake -G "Visual Studio 17 2022" -A x64 ^
-      -DCMAKE_PREFIX_PATH="C:\Qt\6.6.0\msvc2019_64;C:\lib\muparser" ^
-      ..
-
-# Для MinGW
-cmake -G "MinGW Makefiles" ^
-      -DCMAKE_PREFIX_PATH="C:\Qt\6.6.0\mingw_64;C:\lib\muparser" ^
-      ..
-```
-
-3. Собрать проект:
-```bash
-# Для Visual Studio
-cmake --build . --config Release
-
-# Для MinGW
-mingw32-make
-```
-
-4. Запустить программу:
-```bash
-# Для Visual Studio
-start .\Release\function_plotter.exe
-
-# Для MinGW
-start .\function_plotter.exe
-```
+SOON
 
 ## Лицензия
 
