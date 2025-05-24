@@ -8,7 +8,7 @@
 
 Программа представляет собой графический калькулятор для построения и визуализации математических функций. Реализована с использованием фреймворка Qt и библиотеки muParser для парсинга математических выражений.
 
-![Иллюстрация к проекту](https://raw.githubusercontent.com/Q1rD/function-plotter/main/img/image.png)
+![Иллюстрация к проекту](https://raw.githubusercontent.com/Q1rD/function-plotter/main/img/demo.png)
 
 ### Основные возможности
 
