@@ -33,19 +33,36 @@
 
 - Qt 6.x
 - C++17 или выше
-- muParser
+- muParser 2.x
 - CMake 3.16 или выше
+
+## Установка зависимостей
+
+### Для Linux (Ubuntu/Debian):
+```bash
+sudo apt-get install build-essential cmake libmuparser-dev
+```
+
+### Для Windows:
+
 
 ## Сборка и запуск
 
+### Linux
 1. Клонировать репозиторий:
 ```bash
 git clone https://github.com/Q1rD/function-plotter.git
+cd function-plotter
 ```
 
-2. Сконфигурировать проект:
+```
+mkdir build
+cd build
+```
+
+2. Сконфигурировать проект (укажите свой путь к muParser):
 ```bash
-cmake ..
+cmake .. -DCMAKE_PREFIX_PATH=/usr/include/muparser
 ```
 
 3. Собрать проект:
@@ -57,6 +74,50 @@ make
 ```bash
 ./function_plotter
 ```
+
+### Windows
+1. Клонировать репозиторий:
+```bash
+git clone https://github.com/Q1rD/function-plotter.git
+cd function-plotter
+```
+
+```
+mkdir build
+cd build
+```
+
+2. Сконфигурировать проект:
+```bash
+# Для Visual Studio
+cmake -G "Visual Studio 17 2022" -A x64 ^
+      -DCMAKE_PREFIX_PATH="C:\Qt\6.6.0\msvc2019_64;C:\lib\muparser" ^
+      ..
+
+# Для MinGW
+cmake -G "MinGW Makefiles" ^
+      -DCMAKE_PREFIX_PATH="C:\Qt\6.6.0\mingw_64;C:\lib\muparser" ^
+      ..
+```
+
+3. Собрать проект:
+```bash
+# Для Visual Studio
+cmake --build . --config Release
+
+# Для MinGW
+mingw32-make
+```
+
+4. Запустить программу:
+```bash
+# Для Visual Studio
+start .\Release\function_plotter.exe
+
+# Для MinGW
+start .\function_plotter.exe
+```
+
 ## Лицензия
 
 Данный проект является учебным и распространяется под лицензией MIT.
